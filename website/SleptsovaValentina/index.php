@@ -1,5 +1,6 @@
 <?php
-// Соединяемся, выбираем базу данных VER 2.0
+// Соединяемся, выбираем базу данных VER3
+echo "Добрый день!"
 $link = mysql_connect('mysql_host', 'mysql_user', 'mysql_password')
     or die('Не удалось соединиться: ' . mysql_error());
 echo 'Соединение успешно установлено';

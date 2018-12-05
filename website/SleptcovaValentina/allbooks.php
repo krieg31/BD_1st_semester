@@ -16,7 +16,7 @@
 	$SQLquery = 'SELECT * FROM authors INNER JOIN books on books.AuthorID=authors.AuthorID';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
-	printf('<table width=''100%'' cellspacing=''0'' border=''1''>');
+	printf('<table width=\'100%\' cellspacing=\'0\' border=\'1\'>');
 	printf('<TR>');
 	printf('	<TH>First Name</TH>');
 	printf('	<TH>Family Name</TH>');

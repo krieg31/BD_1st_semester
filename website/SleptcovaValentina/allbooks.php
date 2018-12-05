@@ -15,9 +15,30 @@
 	// Выполняем SQL-запрос
 	$SQLquery = 'SELECT * FROM authors INNER JOIN books on books.AuthorID=authors.AuthorID';
 	$SQLresult = mysqli_query($link,$SQLquery);
+
+	printf('<table width="100%" cellspacing="0" border="1">');
+	printf('<TR>');
+	printf('	<TH>First Name</TH>');
+	printf('	<TH>Family Name</TH>');
+	printf('	<TH>Book</TH>');
+	printf('</TR>');
+		<TR>
+			<TD>
+			  <a href="allbooks.php"> <P>All books</P> </a>
+			  <a href="dostojevsky.php"> <P>Books of Dostojevsky</P> </a>
+			  <a href="users.php"> <P>Our Staff</P> </a>
+			</TD>
+			<TD>
+			  <img src="images/library.jpg" alt="This is how my library will look like" />			
+			</TD>
+		</TR>
+
+
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<P>Author: %s %s, Book: %s (%d) </P>',$result[1],$result[2],$result[5],$result[6]);
+		printf('<TR> %s','\n');
+		printf('<TD> %s </TD> nn <TD>%s</TD> /n <TD> %s (%d) </TD> %s',$result[1],$result[2],$result[5],$result[6],'\n');
+		printf('</TR> %s','/n');
 	}
 	// Освобождаем память от результата
 	mysqli_free_result($SQLresult);

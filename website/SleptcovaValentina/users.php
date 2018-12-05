@@ -17,7 +17,7 @@
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<P>User: %s, e-mail: %s </P>',$result[2],$result[4]);
+		printf('<P>User: %s, e-mail: %s </P>',$result[1],$result[3]);
 	}
 	// Освобождаем память от результата
 	mysqli_free_result($SQLresult);

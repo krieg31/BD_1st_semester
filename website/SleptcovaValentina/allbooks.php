@@ -13,11 +13,11 @@
 	echo '<P>Succesfully connected!</P>';
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM books';
+	$SQLquery = 'SELECT * FROM author INNER JOIN books on books.AuthorID=authors.AuthorID';
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<P>%s %s</P>',$result[0],$result[1]);
+		printf('<P>%s %s </P>',$result[0],$result[1]);
 	}
 	// Освобождаем память от результата
 	mysqli_free_result($SQLresult);

@@ -5,7 +5,7 @@
  </head>
  <body>
 	<?php
-	printf('<P>Hello world! Searching for every book:</P>');
+	printf('<P>Hello world! Searching for books of Dostojevsky:</P>');
 	// Соединяемся, выбираем базу данных VER3
 	
 	$link = mysqli_connect('10.14.129.132', 'SlepcovaValentina', 'Dc6LZquV','SlepcovaValentinaDB')

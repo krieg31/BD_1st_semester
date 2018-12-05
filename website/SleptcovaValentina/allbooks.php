@@ -26,9 +26,9 @@
 
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<TR> %s','\n');
-		printf('<TD> %s </TD> nn <TD>%s</TD> /n <TD> %s (%d) </TD> %s',$result[1],$result[2],$result[5],$result[6],'\n');
-		printf('</TR> %s','/n');
+		printf('<TR>');
+		printf('<TD> %s </TD> nn <TD>%s</TD> /n <TD> %s (%d) </TD>',$result[1],$result[2],$result[5],$result[6]);
+		printf('</TR>');
 	}
 	printf('</table>');
 	// Освобождаем память от результата

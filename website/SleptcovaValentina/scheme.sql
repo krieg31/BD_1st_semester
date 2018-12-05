@@ -23,3 +23,12 @@ INSERT INTO books VALUES (4,2,'Идиот',1868);
 INSERT INTO books VALUES (5,2,'Братья Карамазовы',1880);
 INSERT INTO books VALUES (6,2,'Бесы',1872);
 INSERT INTO books VALUES (7,3,'Лабиринт Отражений',1997);
+
+CREATE TABLE users (
+	UserID int NOT NULL PRIMARY KEY, 
+	UserName varchar(20),
+	UserPass varchar(20),
+	UserEMail varchar(100));
+INSERT INTO users VALUES (1, 'KingMonster','password','monster@hotmail.com');
+INSERT INTO users VALUES (2, 'School23rulz','iamcool','sc23@hotmail.com');
+INSERT INTO users VALUES (3, 'Beorht','12345','guest@hotmail.com');

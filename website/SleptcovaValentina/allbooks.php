@@ -17,7 +17,7 @@
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'>');
-	printf('<TR>');
+	printf('<TR> %s',"\n");
 	printf('	<TH>First Name</TH>');
 	printf('	<TH>Family Name</TH>');
 	printf('	<TH>Book</TH>');

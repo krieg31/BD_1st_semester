@@ -22,16 +22,6 @@
 	printf('	<TH>Family Name</TH>');
 	printf('	<TH>Book</TH>');
 	printf('</TR>');
-		<TR>
-			<TD>
-			  <a href="allbooks.php"> <P>All books</P> </a>
-			  <a href="dostojevsky.php"> <P>Books of Dostojevsky</P> </a>
-			  <a href="users.php"> <P>Our Staff</P> </a>
-			</TD>
-			<TD>
-			  <img src="images/library.jpg" alt="This is how my library will look like" />			
-			</TD>
-		</TR>
 
 
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
@@ -40,6 +30,7 @@
 		printf('<TD> %s </TD> nn <TD>%s</TD> /n <TD> %s (%d) </TD> %s',$result[1],$result[2],$result[5],$result[6],'\n');
 		printf('</TR> %s','/n');
 	}
+	printf('</table>');
 	// Освобождаем память от результата
 	mysqli_free_result($SQLresult);
 	mysqli_close($link);

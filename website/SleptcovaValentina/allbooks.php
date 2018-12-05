@@ -17,7 +17,7 @@
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<P>%s %s </P>',$result[0],$result[1]);
+		printf('<P>Автор: %s %s, Книга: %s (%d) </P>',$result[1],$result[2],$result[5],$result[6]);
 	}
 	// Освобождаем память от результата
 	mysqli_free_result($SQLresult);

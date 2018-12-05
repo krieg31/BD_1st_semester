@@ -5,17 +5,18 @@
  </head>
  <body>
 	<?php
+	echo "<P>Добрый день! Поиск всех книг:</P>"
 	// Соединяемся, выбираем базу данных VER3
 	CREATE USER 'SlepcovaValentina'@'%' IDENTIFIED BY 'Dc6LZquV';
-	echo "Добрый день!"
+	
 	$link = mysql_connect('10.14.129.132', 'SlepcovaValentina', 'Dc6LZquV')
-	    or die('Unable to connect: ' . mysql_error());
+	    or die('Error: Unable to connect: ' . mysql_error());
 	echo '<P>Succesfully connected!</P>';
-	mysql_select_db('SlepcovaValentinaDB') or die('Не удалось выбрать базу данных');
+	mysql_select_db('SlepcovaValentinaDB') or die('Error: Use database failed!');
 	
 	// Выполняем SQL-запрос
-	$query = 'SELECT * FROM my_table';
-	$result = mysql_query($query) or die('Запрос не удался: ' . mysql_error());
+	$query = 'SELECT * FROM books';
+	$result = mysql_query($query) or die('Error: Query Failed: ' . mysql_error());
 	
 	// Check ahead, before using it
 	if (mysql_num_rows($result) > 0) 

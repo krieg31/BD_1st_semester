@@ -5,7 +5,7 @@
  </head>
  <body>
 	<?php
-	printf('<P>Hello world! Searching for every book:</P>');
+	printf('<P>Hello world! Searching for every book:</P> %s',"\n");
 	// Соединяемся, выбираем базу данных VER3
 	
 	$link = mysqli_connect('10.14.129.132', 'SlepcovaValentina', 'Dc6LZquV','SlepcovaValentinaDB')
@@ -28,9 +28,9 @@
 	{
 		printf('<TR>');
 		printf('<TD> %s </TD> <TD>%s</TD> <TD> %s (%d) </TD>',$result[1],$result[2],$result[5],$result[6]);
-		printf('</TR>');
+		printf('</TR> %s',"\n");
 	}
-	printf('</table>');
+	printf('</table> %s',"\n");
 	// Освобождаем память от результата
 	mysqli_free_result($SQLresult);
 	mysqli_close($link);

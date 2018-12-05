@@ -5,21 +5,21 @@
  </head>
  <body>
 	<?php
-	printf('<P>─юсЁ√щ фхэ№! ╧юшёъ тёхї ъэшу:</P>');
-	// ╤юхфшэ хьё , т√сшЁрхь срчє фрээ√ї VER3
+	printf('<P>Добрый день! Поиск всех книг:</P>');
+	// Соединяемся, выбираем базу данных VER3
 	
 	$link = mysqli_connect('10.14.129.132', 'SlepcovaValentina', 'Dc6LZquV','SlepcovaValentinaDB')
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	echo '<P>Succesfully connected!</P>';
 	
-	// ┬√яюыэ хь SQL-чряЁюё
+	// Выполняем SQL-запрос
 	$SQLquery = 'SELECT * FROM author INNER JOIN books on books.AuthorID=authors.AuthorID';
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<P>└тЄюЁ: %s %s, ╩эшур: %s (%d) </P>',$result[1],$result[2],$result[5],$result[6]);
+		printf('<P>Автор: %s %s, Книга: %s (%d) </P>',$result[1],$result[2],$result[5],$result[6]);
 	}
-	// ╬ётюсюцфрхь ярь Є№ юЄ Ёхчєы№ЄрЄр
+	// Освобождаем память от результата
 	mysqli_free_result($SQLresult);
 	mysqli_close($link);
 

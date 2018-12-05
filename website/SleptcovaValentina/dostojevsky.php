@@ -13,7 +13,7 @@
 	echo '<P>Succesfully connected!</P>';
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM authors INNER JOIN books on books.AuthorID=authors.AuthorID WHERE authors.FamilyName=''Достоевский''';
+	$SQLquery = 'SELECT * FROM authors INNER JOIN books on books.AuthorID=authors.AuthorID WHERE authors.AuthorID=2';
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{

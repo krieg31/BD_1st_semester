@@ -24,6 +24,7 @@
 	mysqli_close($link);
 
 ?>
-
+<BR>
+<a href="index.html"> <P>GO BACK</P> </a>
  </body>
 </html>

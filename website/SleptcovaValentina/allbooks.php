@@ -5,39 +5,24 @@
  </head>
  <body>
 	<?php
-	echo "<P>Добрый день! Поиск всех книг:</P>"
+	printf('<P>Добрый день! Поиск всех книг:</P>');
 	// Соединяемся, выбираем базу данных VER3
-	CREATE USER 'SlepcovaValentina'@'%' IDENTIFIED BY 'Dc6LZquV';
 	
-	$link = mysql_connect('10.14.129.132', 'SlepcovaValentina', 'Dc6LZquV')
-	    or die('Error: Unable to connect: ' . mysql_error());
+	$link = mysqli_connect('10.14.129.132', 'SlepcovaValentina', 'Dc6LZquV','SlepcovaValentinaDB')
+	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	echo '<P>Succesfully connected!</P>';
-	mysql_select_db('SlepcovaValentinaDB') or die('Error: Use database failed!');
 	
 	// Выполняем SQL-запрос
-	$query = 'SELECT * FROM books';
-	$result = mysql_query($query) or die('Error: Query Failed: ' . mysql_error());
-	
-	// Check ahead, before using it
-	if (mysql_num_rows($result) > 0) 
+	$SQLquery = 'SELECT * FROM books';
+	$SQLresult = mysqli_query($link,$SQLquery);
+	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		// Выводим результаты в html
-		echo "<table>\n";
-		while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
-		    echo "\t<tr>\n";
-		    foreach ($line as $col_value) {
-	        	echo "\t\t<td>$col_value</td>\n";
-		    }
-		    echo "\t</tr>\n";
-		}
-		echo "</table>\n";
+		printf('<P>%s %s</P>',$result[0],$result[1]);
 	}
-
 	// Освобождаем память от результата
-	mysql_free_result($result);
-	
-	// Закрываем соединение
-	mysql_close($link);
+	mysqli_free_result($SQLresult);
+	mysqli_close($link);
+
 ?>
 
  </body>

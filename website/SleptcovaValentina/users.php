@@ -5,7 +5,7 @@
  </head>
  <body>
 	<?php
-	printf('<P>Hello world! Searching for every book:</P>');
+	printf('<P>Hello world! List of users:</P>');
 	// Соединяемся, выбираем базу данных VER3
 	
 	$link = mysqli_connect('10.14.129.132', 'SlepcovaValentina', 'Dc6LZquV','SlepcovaValentinaDB')
@@ -13,11 +13,11 @@
 	echo '<P>Succesfully connected!</P>';
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM authors INNER JOIN books on books.AuthorID=authors.AuthorID';
+	$SQLquery = 'SELECT * FROM users';
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<P>Author: %s %s, Book: %s (%d) </P>',$result[1],$result[2],$result[5],$result[6]);
+		printf('<P>User: %s, e-mail: %s </P>',$result[2],$result[4]);
 	}
 	// Освобождаем память от результата
 	mysqli_free_result($SQLresult);

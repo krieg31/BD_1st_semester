@@ -16,9 +16,11 @@
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
-	printf('	<TH>First Name</TH> %s',"\n");
+	printf('	<TH>ID</TH> %s',"\n");
 	printf('	<TH>Family Name</TH> %s',"\n");
-	printf('	<TH>Book</TH> %s',"\n");
+	printf('	<TH>First Name</TH> %s',"\n");
+	printf('	<TH>Father name</TH> %s',"\n");
+	printf('	<TH>Passport data</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 
 

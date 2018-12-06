@@ -8,12 +8,12 @@
 	printf('<P>Hello world! Searching for every book:</P> %s',"\n");
 	// Соединяемся, выбираем базу данных VER3
 	
-	$link = mysqli_connect('10.14.129.132', 'SlepcovaValentina', 'Dc6LZquV','SlepcovaValentinaDB')
+	$link = mysqli_connect('10.14.129.132', 'KrasilnikovEgor','qmBsLnFN','KrasilnikovEgorDB')
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM authors INNER JOIN books on books.AuthorID=authors.AuthorID';
+	$SQLquery = 'SELECT * FROM patient';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");

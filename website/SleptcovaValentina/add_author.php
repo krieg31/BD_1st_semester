@@ -9,12 +9,12 @@ echo $family_name;
 $SQLquery = "INSERT INTO authors (AuthorID, FirstName, FamilyName) VALUES ((SELECT max(AuthorID) from authors) + 1, '$first_name','$family_name')";
 echo '<BR>';
 echo $SQLquery;
-//if(!mysql_query($link,$SQLquery)) {
-//        echo $SQLquery;
-//	echo 'Data not inserted';
-//} else {
-//	echo $SQLquery;
-//    	echo 'Data inserted';
-//}
+if(!mysql_query($link,$SQLquery)) {
+        echo $SQLquery;
+	echo 'Data not inserted';
+} else {
+	echo $SQLquery;
+    	echo 'Data inserted';
+}
 //header("refresh:2; url=form.html");
 ?>

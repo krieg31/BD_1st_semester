@@ -9,7 +9,7 @@
 	printf('<P>Hello world! Searching for every book:</P> %s',"\n");
 	// Соединяемся, выбираем базу данных VER3
 	
-	$link = mysqli_connect($server, $name, $password, $database)
+	$link = mysqli_connect($server, $user, $password, $database)
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	

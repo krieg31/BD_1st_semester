@@ -25,12 +25,13 @@
 			  <a href="authors.php"> <P>Authors</P> </a> 
 			</TD>
 			<TD>
-			  <P>Add Author7:</P>
+			  <P>Add New Book:</P>
 			  <form action="add_book_form_action.php" method="post">
           		  	Title: <input type="text" name="book_title">
           		  	<br>
 				Year: <input type="number" name="book_year">
           		  	<br>
+				Author: 
 				<select name="book_authorid">
 					<?php 
 		                        include('config.php');	
@@ -49,6 +50,7 @@
 					mysqli_close($link);
 					?>
 				</select>
+				<br>
             		  	<input type="submit" value="Add Book">
       			  </form>
 			</TD>

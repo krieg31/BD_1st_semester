@@ -1,5 +1,4 @@
 cd ..\..
-<<<<<<< HEAD
 echo Глобальная настйрока переменных, достаточно выполнить 1 раз
 git config --global user.name NEFUstudents
 git config --global user.email study.svfu@gmail.com

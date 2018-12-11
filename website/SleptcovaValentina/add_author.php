@@ -6,14 +6,15 @@ $first_name = $_POST['first_name'];
 $family_name = $_POST['family_name'];
 echo $first_name;
 echo $family_name;
-$SQLquery = "INSERT INTO authors (AuthorID, FirstName, FamilyName) VALUES ((SELECT max(AuthorID) from authors) + 1, '$first_name','$family_name')";
+S ((SELECT max(AuthorID) from (Select AuthorID from authors) as ID) + 1, 'Mikhail','Antonov');
+$SQLquery = "INSERT INTO authors (AuthorID, FirstName, FamilyName) VALUES ((SELECT max(AuthorID)+1 from (Select AuthorID from authors) as ID), '$first_name','$family_name')";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 
 if (mysqli_query($link, $SQLquery)) {
-    echo "New record created successfully";
+    echo "<BR>New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($link);
+    echo "<BR>Error: " . $sql . "<br>" . mysqli_error($link);
 }
 
 mysqli_close($link);

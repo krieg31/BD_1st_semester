@@ -6,7 +6,9 @@ $first_name = $_POST['first_name'];
 $family_name = $_POST['family_name'];
 echo $first_name;
 echo $family_name;
-//$SQLquery = "INSERT INTO authors (AuthorID, FirstName, FamilyName) VALUES ((SELECT max(AuthorID) from authors) + 1, '$first_name','$family_name')";
+$SQLquery = "INSERT INTO authors (AuthorID, FirstName, FamilyName) VALUES ((SELECT max(AuthorID) from authors) + 1, '$first_name','$family_name')";
+echo '<BR>';
+echo $SQLquery;
 //if(!mysql_query($link,$SQLquery)) {
 //        echo $SQLquery;
 //	echo 'Data not inserted';

@@ -7,14 +7,16 @@ $family_name = $_POST['family_name'];
 echo $first_name;
 echo $family_name;
 $SQLquery = "INSERT INTO authors (AuthorID, FirstName, FamilyName) VALUES ((SELECT max(AuthorID) from authors) + 1, '$first_name','$family_name')";
-echo '<BR>';
+echo '<BR> SQL query: ';
 echo $SQLquery;
-if(!mysql_query($link,$SQLquery)) {
-        echo $SQLquery;
-	echo 'Data not inserted';
+
+if (mysqli_query($link, $SQLquery)) {
+    echo "New record created successfully";
 } else {
-	echo $SQLquery;
-    	echo 'Data inserted';
+    echo "Error: " . $sql . "<br>" . mysqli_error($link);
 }
-//header("refresh:2; url=form.html");
+
+mysqli_close($link);
+
+printf('<a href="index.html"> <P>GO BACK</P> </a>');
 ?>

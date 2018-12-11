@@ -44,7 +44,7 @@
 					mysqli_close($link);
 			                ?>
 			<form>
- 				<input type="button" value="Добавить автора" onClick='location.href="add_author.php"'>
+ 				<input type="button" value="Add Author" onClick='location.href="add_author.php"'>
 			</form>
 			</TD>
 		</TR>

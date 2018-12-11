@@ -20,7 +20,7 @@
 			<TD>
 			  <a href="allbooks.php"> <P>All books</P> </a>
 			  <a href="dostojevsky.php"> <P>Books of Dostojevsky</P> </a>
-			  <a href="addbook.php"> <P>Add new Book</P> </a> 
+			  <a href="add_book.php"> <P>Add new Book</P> </a> 
 			  <a href="users.php"> <P>Our Staff</P> </a>
 			  <a href="authors.php"> <P>Authors</P> </a> 
 			</TD>

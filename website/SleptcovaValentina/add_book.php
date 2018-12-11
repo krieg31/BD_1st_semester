@@ -25,28 +25,32 @@
 			  <a href="authors.php"> <P>Authors</P> </a> 
 			</TD>
 			<TD>
-			  <P>Our Authors</P>
-					<?php
-					// Соединяемся, выбираем базу данных VER3
+			  <P>Add Author7:</P>
+			  <form action="add_book_form_action.php" method="post">
+          		  	Title: <input type="text" name="book_title">
+          		  	<br>
+				Year: <input type="number" name="book_year">
+          		  	<br>
+				<select name="book_authorid">
+					<?php 
 		                        include('config.php');	
 					$link = mysqli_connect($server, $user, $password, $database)					
 	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
-					echo '<P>Succesfully connected!</P>';
-	
+						
 					// Выполняем SQL-запрос
-					$SQLquery = 'SELECT * FROM authors';
+					$SQLquery = 'SELECT AuthorID, CONCAT(FirstName, \' \', FamilyName) FROM authors';
 					$SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{
-						printf('<P>Author(%d): %s %s</P>',$result[0],$result[1],$result[2]);
+						printf('<option value=%d>%s</option>',$result[0],$result[1]);
 					}
 					// Освобождаем память от результата
 					mysqli_free_result($SQLresult);
 					mysqli_close($link);
-			                ?>
-			<form>
- 				<input type="button" value="Add Author" onClick='location.href="add_author.html"'>
-			</form>
+					?>
+				</select>
+            		  	<input type="submit" value="Add Book">
+      			  </form>
 			</TD>
 		</TR>
 

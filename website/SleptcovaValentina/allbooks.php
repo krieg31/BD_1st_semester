@@ -5,10 +5,10 @@
  </head>
  <body>
 	<?php
-	include('config.php');
 	printf('<P>Hello world! Searching for every book:</P> %s',"\n");
 	// Соединяемся, выбираем базу данных VER3
-	
+
+	include('config.php');	
 	$link = mysqli_connect($server, $user, $password, $database)
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	printf('<P>Succesfully connected!</P> %s',"\n");

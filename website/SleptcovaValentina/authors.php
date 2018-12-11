@@ -37,14 +37,14 @@
 					$SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{
-						printf('<P>Author: %s %s</P>',$result[1],$result[2]);
+						printf('<P>Author(%d): %s %s</P>',$result[0],$result[1],$result[2]);
 					}
 					// Освобождаем память от результата
 					mysqli_free_result($SQLresult);
 					mysqli_close($link);
 			                ?>
 			<form>
- 				<input type="button" value="Add Author" onClick='location.href="add_author.php"'>
+ 				<input type="button" value="Add Author" onClick='location.href="add_author.html"'>
 			</form>
 			</TD>
 		</TR>

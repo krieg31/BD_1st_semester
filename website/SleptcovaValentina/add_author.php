@@ -4,6 +4,9 @@ $link = mysqli_connect('10.14.129.132', 'SlepcovaValentina', 'Dc6LZquV','Slepcov
 
 $first_name = $_POST['first_name'];
 $family_name = $_POST['family_name'];
+// «¿›— ≈…œ»“‹
+// PhPMyAdmin
+// —¿ »À¿ ¬Œ–Àƒ
 echo $first_name;
 echo $family_name;
 

@@ -6,7 +6,7 @@ $first_name = $_POST['first_name'];
 $family_name = $_POST['family_name'];
 echo $first_name;
 echo $family_name;
-S ((SELECT max(AuthorID) from (Select AuthorID from authors) as ID) + 1, 'Mikhail','Antonov');
+
 $SQLquery = "INSERT INTO authors (AuthorID, FirstName, FamilyName) VALUES ((SELECT max(AuthorID)+1 from (Select AuthorID from authors) as ID), '$first_name','$family_name')";
 echo '<BR> SQL query: ';
 echo $SQLquery;

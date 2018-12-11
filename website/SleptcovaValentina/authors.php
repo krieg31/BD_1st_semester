@@ -21,7 +21,7 @@
 			  <a href="allbooks.php"> <P>All books</P> </a>
 			  <a href="dostojevsky.php"> <P>Books of Dostojevsky</P> </a>
 			  <a href="users.php"> <P>Our Staff</P> </a>
-			  <a href="authors.html"> <P>Authors</P> </a> 
+			  <a href="authors.php"> <P>Authors</P> </a> 
 			</TD>
 			<TD>
 			  <P>Our Authors</P>

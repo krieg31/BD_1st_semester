@@ -33,7 +33,7 @@
 		
 		printf('<TR>');
 		
-		printf('<TD> %s </TD> <TD>%s</TD> <TD> %s (%d) </TD>',$result[1],$result[2],$result[5],$result[6]);
+		printf('<TD> %s </TD> <TD> %s </TD> <TD> %s </TD>',$result[1],$result[2],$result[3]);
 			printf('</TR> %s',"\n");
 	
 	}

@@ -3,9 +3,9 @@ include('config.php');
 $link = mysqli_connect($server, $user, $password, $database)
 	or die('Error: Unable to connect: ' . mysqli_connect_error());
 
-$book_authorid = $_POST['book_authorid'];
-$book_title = $_POST['book_title'];
-$book_year = $_POST['book_year'];
+$book_authorid = mysqli_real_escape_string($link, $_POST['book_authorid']);
+$book_title = mysqli_real_escape_string($link, $_POST['book_title']);
+$book_year = mysqli_real_escape_string($link, $_POST['book_year']);
 // «¿›— ≈…œ»“‹
 // PhPMyAdmin
 // —¿ »À¿ ¬Œ–Àƒ

@@ -10,10 +10,10 @@
 	
 	$link = mysqli_connect('10.14.129.132', 'GurinovAjtal', 'CB5LagBA','GurinovAjtalDB')
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
-	printf('<P>Succesfully connected!</P> %s',"\n");
+	printf('<P>Successfully connected!</P> %s',"\n");
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM Doctors';
+	$SQLquery = 'SELECT * FROM Doctor';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");

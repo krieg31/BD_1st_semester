@@ -1,11 +1,11 @@
 <html>
  <head>
-  <title>WEB-site of the Sletcova National Library</title>
+  <title>WEB-site of the Budishchev's and Zakharova's Hospital</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  </head>
  <body>
 	<?php
-	printf('<P>Hello world! Searching for every book:</P> %s',"\n");
+	printf('<P>Hello world! Searching for patients:</P> %s',"\n");
 	// Соединяемся, выбираем базу данных VER3
 
 	include('config.php');	
@@ -14,21 +14,20 @@
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM authors INNER JOIN books on books.AuthorID=authors.AuthorID';
+	$SQLquery = 'SELECT FIO,Pasport FROM patients';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
-	printf('	<TH>First Name</TH> %s',"\n");
-	printf('	<TH>Family Name</TH> %s',"\n");
-	printf('	<TH>Book</TH> %s',"\n");
+	printf('	<TH>FIO</TH> %s',"\n");
+	printf('	<TH>Pasport</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 
 
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %s </TD> <TD>%s</TD> <TD> %s (%d) </TD>',$result[1],$result[2],$result[5]);
+		printf('<TD> %s </TD> <TD>%s</TD> <TD> %s (%d) </TD>',$result[1],$result[2],$result[5],$result[6]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");

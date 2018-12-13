@@ -24,7 +24,7 @@ echo $predoplata;
 echo $free;
 echo $idowner;
 
-$SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, descriptionl, price, predoplata, free, idowner) VALUES ($idobject, '$adress',$square,$room,$floors,'$descriptionl',$price,$predoplata,$free,$idowner)";
+$SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, descriptionl, price, predoplata, free, customers_idcustomer) VALUES ($idobject, '$adress',$square,$room,$floors,'$descriptionl',$price,$predoplata,$free,$idowner)";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 

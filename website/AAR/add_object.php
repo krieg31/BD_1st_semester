@@ -37,12 +37,14 @@
 					$link = mysqli_connect('10.14.129.132', 'HorchoevArtur', 'we4DGTeQ','HorchoevArturDB')
     				or die('Error: Unable to connect: ' . mysqli_connect_error());
 	
-					$SQLquery = 'SELECT idcustomer FROM customers';
+					$SQLquery = 'SELECT idcustomer,CONCAT(surname, \' \', name) FROM customers';
 					$SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{
-						printf('<option value=%d>%s</option>',$result[0]);
+						printf('<option value=%d> %s </option>',$result[0],$result[1]);
 					}
+
+
 					mysqli_free_result($SQLresult);
 					mysqli_close($link);
 					?>

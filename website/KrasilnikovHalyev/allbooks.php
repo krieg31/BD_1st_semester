@@ -23,15 +23,15 @@
 	printf('</TR> %s',"\n");
 
 
-	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
-	{
-		printf('<TR>');
-		printf('<TD> %s </TD> <TD> %s </TD> ',$result[2],$result[3]);
-		printf('</TR> %s',"\n");
-	}
-	printf('</table> %s',"\n");
-	mysqli_free_result($SQLresult);
-	mysqli_close($link);
+//	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
+//	{
+//		printf('<TR>');
+//		printf('<TD> %s </TD> <TD> %s </TD> ',$result[2],$result[3]);
+//		printf('</TR> %s',"\n");
+//	}
+//	printf('</table> %s',"\n");
+//	mysqli_free_result($SQLresult);
+//	mysqli_close($link);
 
 ?>
 <a href = "index.html"> <P>GO BACK</P> </a>

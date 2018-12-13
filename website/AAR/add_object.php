@@ -37,7 +37,7 @@
 					$link = mysqli_connect('10.14.129.132', 'HorchoevArtur', 'we4DGTeQ','HorchoevArturDB')
     				or die('Error: Unable to connect: ' . mysqli_connect_error());
 	
-					$SQLquery = 'SELECT customers_idcustomer FROM recvizity';
+					$SQLquery = 'SELECT idcustomer FROM customers';
 					$SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{

@@ -19,7 +19,7 @@
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
 	printf('	<TH>Name</TH> %s',"\n");
-	printf('	<TH>family_name</TH> %s,'"\n");
+	printf('	<TH>family_name</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 
 

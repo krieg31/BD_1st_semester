@@ -13,6 +13,16 @@ echo '<P>Successfully connected<\P>';
 
 $SQLquery = 'SELECT * FROM Object';
 $SQLresult = mysqli_query($link,$SQLquery);
+printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
+	printf('<TR> %s',"\n");
+	printf('	<TH>adress</TH> %s',"\n");
+	printf('	<TH>etaz</TH> %s',"\n");
+	printf('	<TH>komnat</TH> %s',"\n");
+	printf(' <TH> opisanie</TH> %s' ," \n");
+printf('	<TH>photo</TH> %s',"\n");
+printf('	<TH>passport</TH> %s',"\n");
+printf('	<TH>komisia</TH> %s',"\n");
+	printf('</TR> %s',"\n");
 while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');

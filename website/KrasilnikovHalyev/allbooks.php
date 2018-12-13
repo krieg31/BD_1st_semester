@@ -1,7 +1,7 @@
 <<<<<<< HEAD:website/KrasilnikovHalyev/allbooks.php
 <html>
  <head>
-  <title>fockin patients</title>
+  <title>WEB-site of the Sletcova National Library</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  </head>
  <body>

@@ -1,26 +1,29 @@
 <html>
  <head>
-  <title>WEB-site of the Sletcova National Library</title>
+  <title>Rabotniki</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  </head>
  <body>
 	<?php
-	printf('<P>Hello world! Searching for every book:</P> %s',"\n");
-	// ‘®¥¤¨­ï¥¬áï, ¢ë¡¨à ¥¬ ¡ §ã ¤ ­­ëå VER3
+	printf('<P>Spisok rabotnikov:</P> %s',"\n");
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å¡žï¿½ï¿½, ï¿½ë¡¨à ¥ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ VER3
 	
-	$link = mysqli_connect('10.14.129.132', 'SlepcovaValentina', 'Dc6LZquV','SlepcovaValentinaDB')
+	$link = mysqli_connect('10.14.129.132', 'EgorovaTatyana', 'zEdAkFNC','EgorovaTatyanaDB')
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
-	// ‚ë¯®«­ï¥¬ SQL-§ ¯à®á
-	$SQLquery = 'SELECT * FROM authors INNER JOIN books on books.AuthorID=authors.AuthorID';
+	// ï¿½ë¯®ï¿½ï¿½å¡ž SQL-ï¿½ï¿½ï¿½ï¿½ï¿½
+	$SQLquery = 'SELECT * FROM rabotniki';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
 	printf('	<TH>First Name</TH> %s',"\n");
 	printf('	<TH>Family Name</TH> %s',"\n");
-	printf('	<TH>Book</TH> %s',"\n");
+	printf('	<TH>Father Name</TH> %s',"\n");
+	printf('	<TH>Degree</TH> %s',"\n");
+	printf('	<TH>Time</TH> %s',"\n");
+	printf('	<TH>Passport</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 
 
@@ -31,7 +34,7 @@
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
-	// Žá¢®¡®¦¤ ¥¬ ¯ ¬ïâì ®â à¥§ã«ìâ â 
+	// ï¿½á¢®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ à¥§ï¿½ï¿½ï¿½ï¿½
 	mysqli_free_result($SQLresult);
 	mysqli_close($link);
 

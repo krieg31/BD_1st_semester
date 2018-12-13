@@ -37,5 +37,6 @@
 	mysqli_close($link);
 
 	?>
+	<a href="index.html"> <P>GO BACK</P> </a>
  </body>
 </html>

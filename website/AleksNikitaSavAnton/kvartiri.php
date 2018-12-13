@@ -38,5 +38,42 @@
 
 	?>
 	<a href="index.html"> <P>GO BACK</P> </a>
+
+	<TD>
+			  <P>Add New Book:</P>
+			  <form action="add_book_form_action.php" method="post">
+          		  	foto: <input type="text" name="adres">
+          		  	<br>
+          		  	foto: <input type="text" name="ploshad">
+          		  	<br>
+          		  	foto: <input type="text" name="count_komnat">
+          		  	<br>
+          		  	foto: <input type="text" name="etazh">
+          		  	<br>
+          		  	foto: <input type="text" name="kratk">
+          		  	<br>
+				kvartiri_id_kvartiri: 
+					<select name="4i4">
+					<?php 
+		                        include('config.php');	
+					$link = mysqli_connect($server, $user, $password, $database)					
+	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
+						
+					$SQLquery = 'SELECT id_4elovek FROM 4elovek';
+					$SQLresult = mysqli_query($link,$SQLquery);
+					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
+					{
+						printf('<option value=%d>%s</option>',$result[0]);
+					}
+					mysqli_free_result($SQLresult);
+					mysqli_close($link);
+					?>
+					</select>
+          		  	foto: <input type="text" name="kommissia">
+          		  	<br>
+				<br>
+            		  	<input type="submit" value="Add FOTO">
+      			  </form>
+	</TD>
  </body>
 </html>

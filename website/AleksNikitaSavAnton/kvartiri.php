@@ -42,34 +42,34 @@
 	<TD>
 			  <P>Add New Book:</P>
 			  <form action="add_book_form_action.php" method="post">
-          		  	foto: <input type="text" name="adres">
+          		  	adres: <input type="text" name="adres">
           		  	<br>
-          		  	foto: <input type="text" name="ploshad">
+          		  	ploshad: <input type="text" name="ploshad">
           		  	<br>
-          		  	foto: <input type="text" name="count_komnat">
+          		  	count_komnat: <input type="text" name="count_komnat">
           		  	<br>
-          		  	foto: <input type="text" name="etazh">
+          		  	etazh: <input type="text" name="etazh">
           		  	<br>
-          		  	foto: <input type="text" name="kratk">
+          		  	kratk opsi: <input type="text" name="kratk">
           		  	<br>
-				kvartiri_id_kvartiri: 
+				4elovek_id_4elovek: 
 					<select name="4i4">
 					<?php 
 		                        include('config.php');	
 					$link = mysqli_connect($server, $user, $password, $database)					
 	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
 						
-					$SQLquery = 'SELECT id_4elovek FROM 4elovek';
+					$SQLquery = 'SELECT id_4elovek, CONCAT(name, \' \', familia) FROM 4elovek';
 					$SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{
-						printf('<option value=%d>%s</option>',$result[0]);
+						printf('<option value=%d>%s</option>',$result[0],$result[1]);
 					}
 					mysqli_free_result($SQLresult);
 					mysqli_close($link);
 					?>
 					</select>
-          		  	foto: <input type="text" name="kommissia">
+          		  	komissia: <input type="text" name="kommissia">
           		  	<br>
 				<br>
             		  	<input type="submit" value="Add FOTO">

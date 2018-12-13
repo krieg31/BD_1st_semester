@@ -5,7 +5,7 @@
  </head>
  <body>
 <?php
-printf('<P>Hello World! object  </P>');
+printf('<P>Hello World! arenda  </P>');
 $link = mysqli_connect(($server, $user, $password, $database) or die('Error! You suck!'.mysqli_connect_error());
 echo '<P>Successfully connected<\P>';
 

@@ -41,7 +41,7 @@
 
 	<TD>
 			  <P>Add New Book:</P>
-			  <form action="add_book_form_action.php" method="post">
+			  <form action="kvartiri_form_action.php" method="post">
           		  	adres: <input type="text" name="adres">
           		  	<br>
           		  	ploshad: <input type="text" name="ploshad">
@@ -72,7 +72,7 @@
           		  	komissia: <input type="text" name="kommissia">
           		  	<br>
 				<br>
-            		  	<input type="submit" value="Add FOTO">
+            		  	<input type="submit" value="Add kvartira">
       			  </form>
 	</TD>
  </body>

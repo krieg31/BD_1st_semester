@@ -23,7 +23,7 @@ echo $predoplata;
 echo $free;
 echo $idowner;
 
-$SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, description, price, predoplata, free, idowner) VALUES ((SELECT max(idobjects)+1 from (Select idobjects from objects)), '$adress','$square','$room','$floors','$description','$price','$predoplata','$free','$idowner'";
+$SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, description, price, predoplata, free, idowner) VALUES ((SELECT max(idobjects)+1 from (Select idobjects from objects)), '$adress','$square','$room','$floors','$description','$price','$predoplata','$free','$idowner')";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 

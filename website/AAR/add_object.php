@@ -21,7 +21,7 @@
           		  	<br>
 					floors: <input type="text" name="floors">
           		  	<br>
-					description: <input type="text" name="description">
+					descriptionl: <input type="text" name="descriptionl">
           		  	<br>
 					price: <input type="text" name="price">
           		  	<br>

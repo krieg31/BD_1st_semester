@@ -20,6 +20,7 @@
 	printf('<TR> %s',"\n");
 	printf('	<TH>Doctor</TH> %s',"\n");
 	printf('	<TH>Degree</TH> %s',"\n");
+	printf('	<TH>Specialty</TH> %s',"\n"));
 	printf('	<TH>Time</TH> %s',"\n");
 	printf('	<TH>Passport</TH> %s',"\n");
 	printf('</TR> %s',"\n");
@@ -28,7 +29,7 @@
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %s %s %s </TD> <TD> %s </TD> <TD> %s </TD> <TD> %d </TD>',$result[0],$result[1],$result[2],$result[3],$result[4],$result[5]);
+		printf('<TD> %s %s %s </TD> <TD> %s </TD> <TD> %s </TD> <TD> %s </TD> <TD> %d </TD>',$result[0],$result[1],$result[2],$result[3],$result[4],$result[5],$result[6]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");

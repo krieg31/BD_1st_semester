@@ -5,10 +5,10 @@
  </head>
  <body>
 	<?php
-	printf('<P>Hello world! List of users:</P>');
+	printf('<P>Hello world! List of Library users:</P>');
 	// Соединяемся, выбираем базу данных VER3
-	
-	$link = mysqli_connect('10.14.129.132', 'SlepcovaValentina', 'Dc6LZquV','SlepcovaValentinaDB')
+	include('config.php');	
+	$link = mysqli_connect($server, $user, $password, $database)
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	echo '<P>Succesfully connected!</P>';
 	

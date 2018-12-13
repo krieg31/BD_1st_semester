@@ -33,5 +33,32 @@
 
 	?>
 	<a href="index.html"> <P>GO BACK</P> </a>
+
+	<TD>
+			  <P>Add New Book:</P>
+			  <form action="add_book_form_action.php" method="post">
+          		  	foto: <input type="text" name="foto">
+          		  	<br>
+				kvartiri_id_kvartiri: 
+				<select name="kik">
+					<?php 
+		                        include('config.php');	
+					$link = mysqli_connect($server, $user, $password, $database)					
+	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
+						
+					$SQLquery = 'SELECT id_kvartiri FROM kvartiri';
+					$SQLresult = mysqli_query($link,$SQLquery);
+					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
+					{
+						printf('<option value=%d>%s</option>',$result[0]);
+					}
+					mysqli_free_result($SQLresult);
+					mysqli_close($link);
+					?>
+				</select>
+				<br>
+            		  	<input type="submit" value="Add FOTO">
+      			  </form>
+	</TD>
  </body>
 </html>

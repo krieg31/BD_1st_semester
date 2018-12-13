@@ -3,7 +3,6 @@
 $link = mysqli_connect('10.14.129.132', 'HorchoevArtur', 'we4DGTeQ','HorchoevArturDB')
     or die('Error: Unable to connect: ' . mysqli_connect_error());
 
-$idobject = mysqli_real_escape_string($link, $_POST['idobject']);
 $adress = mysqli_real_escape_string($link, $_POST['adress']);
 $square = mysqli_real_escape_string($link, $_POST['square']);
 $room = mysqli_real_escape_string($link, $_POST['room']);
@@ -13,8 +12,8 @@ $price = mysqli_real_escape_string($link, $_POST['price']);
 $predoplata = mysqli_real_escape_string($link, $_POST['predoplata']);
 $free = mysqli_real_escape_string($link, $_POST['free']);
 $idowner = mysqli_real_escape_string($link, $_POST['idowner']);
+$idobject = 12;
 
-echo $idobject;
 echo $adress;
 echo $square;
 echo $room;
@@ -25,7 +24,7 @@ echo $predoplata;
 echo $free;
 echo $idowner;
 
-$SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, description, price, predoplata, free, idowner) VALUES ((SELECT max(idobjects)+1 from (Select idobjects from objects)), '$adress','$square','$room','$floors','$description','$price','$predoplata','$free','$idowner'";
+$SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, description, price, predoplata, free, idowner) VALUES ($idobject, '$adress',$square,$room,$floors,'$description',$price,$predoplata,$free,$idowner)";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 

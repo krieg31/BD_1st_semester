@@ -36,7 +36,7 @@
 
 	<TD>
 			  <P>Add New Book:</P>
-			  <form action="add_book_form_action.php" method="post">
+			  <form action="foto_form_action.php" method="post">
           		  	foto: <input type="text" name="foto">
           		  	<br>
 				kvartiri_id_kvartiri: 

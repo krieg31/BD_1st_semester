@@ -69,7 +69,7 @@
 					mysqli_close($link);
 					?>
 					</select>
-          		  	komissia: <input type="text" name="kommissia">
+          		  	komissia: <input type="text" name="komissia">
           		  	<br>
 				<br>
             		  	<input type="submit" value="Add kvartira">

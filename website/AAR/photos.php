@@ -7,11 +7,9 @@
 	<?php
 	printf('<P>Hello world! Searching for every customer:</P> %s',"\n");
 	
-	$link = mysqli_connect('10.14.129.132', 'HorchoevArtur', 'we4DGTeQ','HorchoevArturDB')
-	    or die('Error: Unable to connect: ' . mysqli_connect_error());
-	printf('<P>Succesfully connected!</P> %s',"\n");
-	
+	require_once('connect.php');
 	$SQLquery = 'SELECT * FROM photos';
+	$link = mysqli_query($con,$SQLquery); 
 	$SQLresult = mysqli_query($link,$SQLquery);
 	$varA;
 

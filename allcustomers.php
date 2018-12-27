@@ -31,6 +31,8 @@
 	$link = mysqli_query($con,$SQLquery); 
 	printf('<P>Succesfully connected!</P> %s',"\n");	
 	$SQLresult = mysqli_query($link,$SQLquery);
+	$afh = mysqli_num_rows($SQLresult);
+	printf('Res: %d',$afh);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");

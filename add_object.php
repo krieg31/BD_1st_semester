@@ -1,27 +1,11 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Horchoev_Burtsev</title>
-	<link rel="stylesheet" type="text/css" href="sitecss.css">
-	<link rel="shortcut icon" href="logo.png" type="image/png" >
-</head>
-<body>
-	<div class="container">
-		<div class="header">
-				Welcome to Horchoev_Burtsev site.
-				<p> Please feel free to browse thorugh the site.</p>
-		</div>
-		<div class="sidebar">
-			<P>Навигация</P><br>
-        <a href="allcustomers.php"> <P>Клиенты</P> </a>
-        <a href="allobjects.php"> <P>Объекты</P> </a>
-        <a href="photos.php"> <P>Фотографии</P> </a>
-        <a href="add_object.php"> <P>Добавить новый объект</P> </a>
-        <a href="index2.html"> <P>Главная страница</P> </a>
-		</div>
-		<div class="content">
-			 	<table width="100%" cellspacing="0" border="1">	
+ <head>
+  <title>WEB-site of the Sletcova National Library</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ </head>
+
+ <body>
+ 	<table width="100%" cellspacing="0" border="1">	
 		<TR>
 			<TH>Table column 1</TH>
 		</TR>
@@ -49,18 +33,14 @@
 
 				<select name="idowner">
 					<?php 
-
-					$link = mysqli_connect('10.14.129.132', 'HorchoevArtur', 'we4DGTeQ','HorchoevArturDB')
-    				or die('Error: Unable to connect: ' . mysqli_connect_error());
-	
+					require_once('connect.php');
 					$SQLquery = 'SELECT idcustomer,CONCAT(surname, \' \', name) FROM customers';
+					$link = mysqli_query($con,$SQLquery); 
 					$SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{
 						printf('<option value=%d> %s </option>',$result[0],$result[1]);
 					}
-
-
 					mysqli_free_result($SQLresult);
 					mysqli_close($link);
 					?>
@@ -73,14 +53,7 @@
 	<?php
 
 ?>
-</table>
 <BR>
-
-<a href="index2.html"> <P>На главную</P> </a>
-		</div>
-		<div class="footer">
-			&copy; Horchoev_Burtsev 2018.  все вопросы по телефону 8(800)123456
-		</div>
-	</div>
-</body>
+<a href="index.html"> <P>GO BACK</P> </a>
+ </body>
 </html>

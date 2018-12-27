@@ -1,34 +1,15 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Horchoev_Burtsev</title>
-	<link rel="stylesheet" type="text/css" href="sitecss.css">
-	<link rel="shortcut icon" href="logo.png" type="image/png" >
-</head>
-<body>
-	<div class="container">
-		<div class="header">
-				Welcome to Horchoev_Burtsev site.
-				<p> Please feel free to browse thorugh the site.</p>
-		</div>
-		<div class="sidebar">
-			<P>Навигация</P><br>
-        <a href="allcustomers.php"> <P>Клиенты</P> </a>
-        <a href="allobjects.php"> <P>Объекты</P> </a>
-        <a href="photos.php"> <P>Фотографии</P> </a>
-        <a href="add_object.php"> <P>Добавить новый объект</P> </a>
-        <a href="index2.html"> <P>Главная страница</P> </a>
-		</div>
-		<div class="content">
-			<?php
+ <head>
+  <title>WEB-site of the Sletcova National Library</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ </head>
+ <body>
+	<?php
 	printf('<P>Hello world! Searching for every customer:</P> %s',"\n");
 	
-	$link = mysqli_connect('10.14.129.132', 'HorchoevArtur', 'we4DGTeQ','HorchoevArturDB')
-	    or die('Error: Unable to connect: ' . mysqli_connect_error());
-	printf('<P>Succesfully connected!</P> %s',"\n");
-	
+	require_once('connect.php');
 	$SQLquery = 'SELECT * FROM photos';
+	$link = mysqli_query($con,$SQLquery); 
 	$SQLresult = mysqli_query($link,$SQLquery);
 	$varA;
 
@@ -59,14 +40,8 @@
 			  <img src=<?php echo $varA;?> alt="This is how my library will look like" />			
 			</TD>
 		</TR>
-</table>
 <BR>
 
-<a href="index2.html"> <P>На главную</P> </a>
-		</div>
-		<div class="footer">
-			&copy; Horchoev_Burtsev 2018.  все вопросы по телефону 8(800)123456
-		</div>
-	</div>
-</body>
+<a href="index.html"> <P>GO BACK</P> </a>
+ </body>
 </html>

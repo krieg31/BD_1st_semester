@@ -18,7 +18,7 @@
         <a href="allobjects.php"> <P>Объекты</P> </a>
         <a href="photos.php"> <P>Фотографии</P> </a>
         <a href="add_object.php"> <P>Добавить новый объект</P> </a>
-        <a href="index2.html"> <P>Главная страница</P> </a>
+        <a href="index.html"> <P>Главная страница</P> </a>
 		</div>
 		<div class="content">
 			 	<table width="100%" cellspacing="0" border="1">	
@@ -75,7 +75,7 @@
 ?>
 </table>
 <BR>
-<a href="index2.html"> <P>На главную</P> </a>
+<a href="index.html"> <P>На главную</P> </a>
 		</div>
 		
 		<div class="footer">

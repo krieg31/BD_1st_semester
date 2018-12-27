@@ -53,3 +53,13 @@ td {
     }
 th{
    border: 1px solid black;}
+img{
+  height: 600px;
+  width: 900px;}
+  .imagee{
+  text-align: center;
+}
+body {
+  background: url(http://www.sergiev.ru/media/images/1160/0081__2012-0903-03__5d-ii-2-img_3201.jpg) no-repeat;
+ 
+}

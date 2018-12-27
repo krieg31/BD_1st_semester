@@ -18,7 +18,7 @@
         <a href="allobjects.php"> <P>Объекты</P> </a>
         <a href="photos.php"> <P>Фотографии</P> </a>
         <a href="add_object.php"> <P>Добавить новый объект</P> </a>
-        <a href="index2.html"> <P>Главная страница</P> </a>
+        <a href="index.html"> <P>Главная страница</P> </a>
 		</div>
 		<div class="content">
 				<?php
@@ -58,7 +58,7 @@
 
 ?>
 <BR>
-<a href="index2.html"> <P>На главную</P> </a>
+<a href="index.html"> <P>На главную</P> </a>
 		</div>
 		<div class="footer">
 			&copy; Horchoev_Burtsev 2018.  все вопросы по телефону 8(800)123456

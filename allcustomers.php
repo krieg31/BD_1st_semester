@@ -8,7 +8,7 @@
 	printf('<P>Hello world! Searching for every customer:</P> %s',"\n");
 	
 	require_once('connect.php');
-	$SQLquery = 'SELECT * FROM customers';
+	$SQLquery = 'SELECT * FROM `customers`';
 	$link = mysqli_query($con,$SQLquery); 
 	$SQLresult = mysqli_query($link,$SQLquery);
 

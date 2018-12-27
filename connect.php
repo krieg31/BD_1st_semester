@@ -1,5 +1,5 @@
 <?php
-define("HOST", "mysql.hostinger.com");
+define("HOST", "localhost");
 define("USER", "u234765589_admi2");
 define("PASS", '123456');
 define("DB", "u234765589_db1st");

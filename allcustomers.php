@@ -27,10 +27,11 @@
 	
 	
 	require_once('connect.php');
+	
+	//$link = mysqli_query($con,$SQLquery); 
 	$SQLquery = 'SELECT * FROM customers';
-	$link = mysqli_query($con,$SQLquery); 
 	printf('<P>Succesfully connected!</P> %s',"\n");	
-	$SQLresult = mysqli_query($link,$SQLquery);
+	$SQLresult = mysqli_query($con,$SQLquery);
 	$afh = mysqli_num_rows($SQLresult);
 	printf('Res: %d',$afh);
 

@@ -49,7 +49,7 @@
 
 				<select name="idowner">
 					<?php 
-
+					require_once('connect.php');
 	
 					$SQLquery = 'SELECT idcustomer,CONCAT(surname, \' \', name) FROM customers';
 					$SQLresult = mysqli_query($con,$SQLquery);

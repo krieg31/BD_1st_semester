@@ -7,19 +7,19 @@ $objects_idobjects = mysqli_real_escape_string($con, $_POST['objects_idobjects']
 $SQLquery = "SELECT photoscol FROM photos WHERE objects_idobjects = $objects_idobjects";
 $SQLresult = mysqli_query($con,$SQLquery);
 $varA = 0;
-printf('<table width="100%" cellspacing="0" border="1">');	
-printf('<TR>');		
-printf('<TH>photos</TH>');	
-printf('</TR>');		
-printf('<TR>');	
+printf('<table width="100%" cellspacing="0" border="1">',"\n");	
+printf('<TR>',"\n");		
+printf('<TH>photos</TH>',"\n");	
+printf('</TR>',"\n");		
+printf('<TR>',"\n");	
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<TD> <img src=<?php echo %s?>/>	</TD>',$result[$varA]);
+		printf('<TD> <img src=<?php echo %s?> /> </TD>',$result[$varA]);
 		printf("\n");
 		$varA=$varA+1;
 	}
-printf('</TR>');		
-printf('</table>');
+printf('</TR>',"\n");		
+printf('</table>',"\n");
 
 mysqli_close($con);
 printf('<a href="index.html"> <P>GO BACK</P> </a>');

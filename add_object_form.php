@@ -21,15 +21,10 @@ echo $predoplata;
 echo $free;
 echo $idowner;
 require_once('connect.php');
-$maxid = 'SELECT max(idobjects) from (SELECT idobjects FROM objects)';
-$varMaxid;
-$SQLresult=mysqli_query($con,$maxid);
-while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
-	{
-		printf('<TD> %s </TD>',$result[0]);
-		printf('<TD> %s </TD>',$result[1]);
-		$varMaxid=$result[0];
-	}
+$maxSQL = mysqli_query($con,"SELECT max(idobjects) AS max FROM `objects` ;");
+$row = mysql_fetch_array($maxSQL);
+$varMaxid = $row['max'];
+
 echo "maxid:";
 echo $varMaxid;
 $SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, descriptionl, price, predoplata, free, customers_idcustomer) VALUES ($varMaxid, '$adress',$square,$room,$floors,'$descriptionl',$price,$predoplata,$free,$idowner)";

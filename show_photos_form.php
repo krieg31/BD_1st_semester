@@ -15,7 +15,7 @@ printf('</TR>',"\n");
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>',"\n");
-		printf('<TD> <img src=%d alt=""> </TD>',$result[$varA]);
+		printf('<TD> <img src=%s alt=""> </TD>',$result[$varA]);
 		printf('</table>',"\n");
 		printf("<br>");
 		$varA=$varA+1;

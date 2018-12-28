@@ -36,7 +36,7 @@
 									<?php 
 										require_once('connect.php');
 	
-										$SQLquery = 'SELECT objects_idobjects FROM photos';
+										$SQLquery = 'SELECT idobjects FROM objects';
 										$SQLresult = mysqli_query($con,$SQLquery);
 										while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 										{

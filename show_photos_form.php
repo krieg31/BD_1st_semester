@@ -10,6 +10,7 @@ printf('<table width="100%" cellspacing="0" border="1">',"\n");
 printf('<TR>',"\n");		
 printf('<TH>photos</TH>',"\n");	
 printf('</TR>',"\n");		
+echo count($result);
 for($i = 0, $size = count($result); $i <= $size; ++$i) {
 	print '<TR>
 				<TD> 

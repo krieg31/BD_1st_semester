@@ -24,7 +24,7 @@ $maxid = "SELECT max(idobjects)+1 from (Select idobjects from objects)";
 $SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, descriptionl, price, predoplata, free, customers_idcustomer) VALUES ($maxid, '$adress',$square,$room,$floors,'$descriptionl',$price,$predoplata,$free,$idowner)";
 echo '<BR> SQL query: ';
 echo $SQLquery;
-
+require_once('connect.php');
 if (mysqli_query($con, $SQLquery)) {
     echo "<BR>New record created successfully";
 } else {

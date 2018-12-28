@@ -14,9 +14,11 @@ printf('</TR>',"\n");
 printf('<TR>',"\n");	
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
+		echo $varA;
 		printf('<TD> <img src=%s alt=""> </TD>',$result[$varA]);
 		printf("\n");
 		$varA=$varA+1;
+		echo $varA;
 	}
 printf('</TR>',"\n");		
 printf('</table>',"\n");

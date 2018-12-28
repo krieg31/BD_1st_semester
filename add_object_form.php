@@ -1,15 +1,16 @@
 <?php
 
 
-$adress = mysqli_real_escape_string($link, $_POST['adress']);
-$square = mysqli_real_escape_string($link, $_POST['square']);
-$room = mysqli_real_escape_string($link, $_POST['room']);
-$floors = mysqli_real_escape_string($link, $_POST['floors']);
-$descriptionl = mysqli_real_escape_string($link, $_POST['descriptionl']);
-$price = mysqli_real_escape_string($link, $_POST['price']);
-$predoplata = mysqli_real_escape_string($link, $_POST['predoplata']);
-$free = mysqli_real_escape_string($link, $_POST['free']);
-$idowner = mysqli_real_escape_string($link, $_POST['idowner']);
+require_once('connect.php');
+$adress = mysqli_real_escape_string($con, $_POST['adress']);
+$square = mysqli_real_escape_string($con, $_POST['square']);
+$room = mysqli_real_escape_string($con, $_POST['room']);
+$floors = mysqli_real_escape_string($con, $_POST['floors']);
+$descriptionl = mysqli_real_escape_string($con, $_POST['descriptionl']);
+$price = mysqli_real_escape_string($con, $_POST['price']);
+$predoplata = mysqli_real_escape_string($con, $_POST['predoplata']);
+$free = mysqli_real_escape_string($con, $_POST['free']);
+$idowner = mysqli_real_escape_string($con, $_POST['idowner']);
 
 echo $adress;
 echo $square;
@@ -20,7 +21,6 @@ echo $price;
 echo $predoplata;
 echo $free;
 echo $idowner;
-require_once('connect.php');
 
 $maxsqlzapr="SELECT MAX(idobjects) AS max FROM objects";
 $maxSQL = mysqli_query($con,$maxsqlzapr);
@@ -28,8 +28,6 @@ $maxSQL = mysqli_query($con,$maxsqlzapr);
 $row = mysqli_fetch_array( $maxSQL );
 $varMaxid = $row['max'];
 
-echo "maxid:";
-echo $varMaxid;
 $SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, descriptionl, price, predoplata, free, customers_idcustomer) VALUES ($varMaxid, '$adress',$square,$room,$floors,'$descriptionl',$price,$predoplata,$free,$idowner)";
 echo '<BR> SQL query: ';
 echo $SQLquery;

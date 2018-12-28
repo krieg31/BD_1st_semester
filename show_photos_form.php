@@ -16,10 +16,10 @@ printf('</TR>',"\n");
 	{
 		printf('<TR>',"\n");
 		printf('<TD> <img src=%s alt=""> </TD>',$result[$varA]);
-		printf('</table>',"\n");
 		printf("<br>");
 		$varA=$varA+1;
 	}
+printf('</table>',"\n");
 
 mysqli_close($con);
 printf('<a href="index.html"> <P>GO BACK</P> </a>');

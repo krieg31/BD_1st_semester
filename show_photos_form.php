@@ -11,16 +11,16 @@ printf('<table width="100%" cellspacing="0" border="1">',"\n");
 printf('<TR>',"\n");		
 printf('<TH>photos</TH>',"\n");	
 printf('</TR>',"\n");		
-printf('<TR>',"\n");	
+	
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
+		printf('<TR>',"\n");
 		printf('<TD> <img src=%s alt=""> </TD>',$result[$varA]);
+		printf('</table>',"\n");
 		echo $result[$varA];
 		printf("<br>");
 		$varA=$varA+1;
 	}
-printf('</TR>',"\n");		
-printf('</table>',"\n");
 
 mysqli_close($con);
 printf('<a href="index.html"> <P>GO BACK</P> </a>');

@@ -2,7 +2,8 @@
 
 require_once('connect.php');
 $idobject = mysqli_real_escape_string($con, $_POST['objects_idobjects']);
-
+echo $idobject;
+echo "\n";
 
 $SQLquery = "SELECT photoscol FROM photos WHERE objects_idobjects = $idobject";
 $SQLresult = mysqli_query($con,$SQLquery);

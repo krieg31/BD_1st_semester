@@ -11,7 +11,7 @@ printf('<TR>',"\n");
 printf('<TH>photos</TH>',"\n");	
 printf('</TR>',"\n");		
 echo count($result);
-for($i = 0, $size = count($result); $i <= $size; ++$i) {
+for($i = 1, $size = count($result); $i <= $size; ++$i) {
 	print '<TR>
 				<TD> 
 					<img src="'.$result[$i].'" alt=""> 

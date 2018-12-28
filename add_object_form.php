@@ -21,8 +21,8 @@ echo $predoplata;
 echo $free;
 echo $idowner;
 require_once('connect.php');
-$maxid = "SELECT max(idobjects) from (SELECT idobjects FROM objects)";
-$varMaxid
+$maxid = 'SELECT max(idobjects) from (SELECT idobjects FROM objects)';
+$varMaxid;
 $SQLresult=mysqli_query($con,$maxid);
 while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{

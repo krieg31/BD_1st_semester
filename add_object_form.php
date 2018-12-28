@@ -26,7 +26,7 @@ $maxsqlzapr="SELECT MAX(idobjects) AS max FROM objects";
 $maxSQL = mysqli_query($con,$maxsqlzapr);
 
 $row = mysqli_fetch_array( $maxSQL );
-$varMaxid = $row['max'];
+$varMaxid = $row['max'] +1;
 
 $SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, descriptionl, price, predoplata, free, customers_idcustomer) VALUES ($varMaxid, '$adress',$square,$room,$floors,'$descriptionl',$price,$predoplata,$free,$idowner)";
 echo '<BR> SQL query: ';

@@ -3,7 +3,7 @@
 require_once('connect.php');
 $idobject = mysqli_real_escape_string($con, $_POST['objects_idobjects']);
 
-$SQLquery = "SELECT photoscol FROM photos WHERE objects_idobjects = 1";
+$SQLquery = "SELECT photoscol FROM photos INNER JOIN objects ON photos.objects_idobjects = $idobject";
 $SQLresult = mysqli_query($con,$SQLquery);
 $result = mysqli_fetch_array($SQLresult,MYSQLI_BOTH);
 printf('<table width="100%" cellspacing="0" border="1">',"\n");	

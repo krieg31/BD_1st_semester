@@ -30,7 +30,7 @@
 		<TR>
 			<TD>
 
-				<form action="add_object_form.php" method="post">
+				<form action="show_photos_form.php" method="post">
 
 					<select name="idowner">
 						<?php 

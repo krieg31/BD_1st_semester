@@ -8,7 +8,7 @@ echo "\n";
 $SQLquery = "SELECT photoscol FROM photos WHERE objects_idobjects = $idobject";
 $SQLresult = mysqli_query($con,$SQLquery);
 $result = mysqli_fetch_array($SQLresult,MYSQLI_NUM);
-echo count($result);
+echo count($result,COUNT_RECURSIVE);
 printf('<table width="100%" cellspacing="0" border="1">',"\n");	
 printf('<TR>',"\n");		
 printf('<TH>photos</TH>',"\n");	

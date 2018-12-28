@@ -26,6 +26,8 @@ $varMaxid;
 $SQLresult=mysqli_query($con,$maxid);
 while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
+		printf('<TD> %s </TD>',$result[0]);
+		printf('<TD> %s </TD>',$result[1]);
 		$varMaxid=$result[0];
 	}
 echo "maxid:";

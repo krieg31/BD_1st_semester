@@ -23,37 +23,39 @@
         <a href="index.html"> <P>Главная страница</P> </a>
 		</div>
 		<div class="content">
-			
-<table width="100%" cellspacing="0" border="1">	
+			 	<table width="100%" cellspacing="0" border="1">	
 		<TR>
-			<TH>выбери id объекта</TH>
+			<TH>Table column 1</TH>
 		</TR>
 		<TR>
 			<TD>
+			  <P>Add object:</P>
+			  <form action="add_photo_form.php" method="post">
 
-				<form action="show_photos_form.php" method="post">
-
-					<select name="objects_idobjects">
-						<?php 
-						require_once('connect.php');
+					idobject: 	<select name="idobject">
+									<?php 
+										require_once('connect.php');
 	
-						$SQLquery = 'SELECT objects_idobjects FROM photos';
-						$SQLresult = mysqli_query($con,$SQLquery);
-						while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
-						{
-							printf('<option value=%d> %s </option>',$result[0],$result[0]);
-						}
-
-
-						mysqli_free_result($SQLresult);
-						mysqli_close($con);
-						?>
-					</select>
+										$SQLquery = 'SELECT objects_idobjects FROM photos';
+										$SQLresult = mysqli_query($con,$SQLquery);
+										while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
+										{
+											printf('<option value=%d> %s </option>',$result[0],$result[0]);
+										}
+										mysqli_free_result($SQLresult);
+										mysqli_close($con);
+									?>
+								</select>
+					<br>
+					url: <input type="text" name="url">
           		  	<br>
-            		  	<input type="submit" value="show photos">
+            		<input type="submit" value="Add photo">
       			  </form>
 			</TD>
 		</TR>
+	<?php
+
+?>
 </table>
 <BR>
 

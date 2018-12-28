@@ -19,6 +19,7 @@
         <a href="photos.php"> <P>Фотографии</P> </a>
         <a href="add_object.php"> <P>Добавить новый объект</P> </a>
         <a href="add_customer.php"> <P>Добавить нового клиента</P> </a>
+        <a href="add_photo.php"> <P>Добавить новое фото</P> </a>
         <a href="index.html"> <P>Главная страница</P> </a>
 		</div>
 		<div class="content">

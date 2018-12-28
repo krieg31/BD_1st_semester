@@ -13,7 +13,7 @@ printf('<TH>photos</TH>',"\n");
 printf('</TR>',"\n");		
 for($i = 0, $size = count($result); $i <= $size; ++$i) {
 	printf('<TR>',"\n");
-	printf('<TD> <img src=',$result[$i],'alt=""> </TD>');
+	printf("<TD> <img src=%s alt=""> </TD>",$result[$i]);
 }
 printf('</table>',"\n");
 mysqli_close($con);

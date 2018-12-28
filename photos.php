@@ -37,7 +37,7 @@
 						<?php 
 						require_once('connect.php');
 	
-						$SQLquery = 'SELECT objects_idobjects FROM photos';
+						$SQLquery = 'SELECT DISTINCT objects_idobjects FROM photos';
 						$SQLresult = mysqli_query($con,$SQLquery);
 						while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 						{

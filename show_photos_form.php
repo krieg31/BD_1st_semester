@@ -13,7 +13,11 @@ printf('<TH>photos</TH>',"\n");
 printf('</TR>',"\n");		
 for($i = 0, $size = count($result); $i <= $size; ++$i) {
 	printf('<TR>',"\n");
+<<<<<<< HEAD
 	printf("<TD> <img src=%s alt=""> </TD>",$result[$i]);
+=======
+	printf('<TD> <img src=%s alt=""> </TD>',$result[$i]);
+>>>>>>> parent of 9c0650a... Update show_photos_form.php
 }
 printf('</table>',"\n");
 mysqli_close($con);

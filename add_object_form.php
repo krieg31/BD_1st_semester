@@ -21,9 +21,10 @@ echo $predoplata;
 echo $free;
 echo $idowner;
 require_once('connect.php');
-$maxsqlzapr="SELECT max(idobjects) AS max FROM objects"
+$maxsqlzapr="SELECT max(idobjects) AS max FROM objects";
 $maxSQL = mysqli_query($con,$maxsqlzapr);
 $row = mysql_fetch_array($maxSQL);
+$varMaxid = $row['max'];
 
 echo "maxid:";
 echo $varMaxid;

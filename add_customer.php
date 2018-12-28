@@ -18,6 +18,7 @@
         <a href="allobjects.php"> <P>Объекты</P> </a>
         <a href="photos.php"> <P>Фотографии</P> </a>
         <a href="add_object.php"> <P>Добавить новый объект</P> </a>
+        <a href="add_customer.php"> <P>Добавить нового клиента</P> </a>
         <a href="index.html"> <P>Главная страница</P> </a>
 		</div>
 		<div class="content">
@@ -44,27 +45,6 @@
 					predoplata: <input type="text" name="predoplata">
           		  	<br>
 					free: <input type="text" name="free">
-          		  	<br>
-					idowner:
-
-				<select name="idowner">
-					<?php 
-
-					$link = mysqli_connect('10.14.129.132', 'HorchoevArtur', 'we4DGTeQ','HorchoevArturDB')
-    				or die('Error: Unable to connect: ' . mysqli_connect_error());
-	
-					$SQLquery = 'SELECT idcustomer,CONCAT(surname, \' \', name) FROM customers';
-					$SQLresult = mysqli_query($link,$SQLquery);
-					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
-					{
-						printf('<option value=%d> %s </option>',$result[0],$result[1]);
-					}
-
-
-					mysqli_free_result($SQLresult);
-					mysqli_close($link);
-					?>
-				</select>
           		  	<br>
             		  	<input type="submit" value="Add object">
       			  </form>

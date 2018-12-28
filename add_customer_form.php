@@ -20,7 +20,7 @@ $maxSQL = mysqli_query($con,$maxsqlzapr);
 $row = mysqli_fetch_array( $maxSQL );
 $varMaxid = $row['max'] +1;
 
-$SQLquery = "INSERT INTO objects (idcustomer, passport, adress, surname, name, fathername) VALUES ($varMaxid, $passport,'$adress','$surname','$name','$fathername')";
+$SQLquery = "INSERT INTO customers (idcustomer, passport, adress, surname, name, fathername) VALUES ($varMaxid, $passport,'$adress','$surname','$name','$fathername')";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 if (mysqli_query($con, $SQLquery)) {

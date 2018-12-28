@@ -15,7 +15,6 @@ printf('</TR>',"\n");
 for($i = 0, $size = count($result); $i <= $size; ++$i) {
 	printf('<TR>',"\n");
 	printf('<TD> <img src=%s alt=""> </TD>',$result[$i]);
-	printf("<br>");
 }
 printf('</table>',"\n");
 mysqli_close($con);

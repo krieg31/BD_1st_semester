@@ -10,10 +10,10 @@ printf('<table width="100%" cellspacing="0" border="1">',"\n");
 printf('<TR>',"\n");		
 printf('<TH>photos</TH>',"\n");	
 printf('</TR>',"\n");		
-for($i = 0, $size = count($result); $i <= $size; ++$i) {
 	echo $result[0];
 	echo $result[1];
 	echo $result[2];
+for($i = 0, $size = count($result); $i <= $size; ++$i) {
 	printf('<TR>',"\n");
 	printf('<TD> <img src=%s alt=""> </TD>',$result[$i]);
 }

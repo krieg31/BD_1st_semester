@@ -13,7 +13,7 @@ printf('</TR>',"\n");
 for($i = 0, $size = count($result); $i <= $size; ++$i) {
 	print '<TR>
 				<TD> 
-					<img src="'.$result[$i]'" alt=""> 
+					<img src="'.$result[$i].'" alt=""> 
 				</TD>
 			</TR>';
 }

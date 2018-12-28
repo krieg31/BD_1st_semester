@@ -18,7 +18,10 @@ printf('<TR>',"\n");
 		echo "varA";
 		echo "\n";
 		echo $varA;
+		echo "\n";
 		printf('<TD> <img src=%s alt=""> </TD>',$result[$varA]);
+		echo $result[$varA];
+		echo "\n";
 		printf("\n");
 		$varA=$varA+1;
 	}

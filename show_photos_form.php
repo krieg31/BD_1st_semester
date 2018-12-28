@@ -12,7 +12,7 @@ printf('<TH>photos</TH>',"\n");
 printf('</TR>',"\n");		
 echo count($result);
 for($i = 0, $size = count($result); $i <= $size; ++$i) {
-	printf('.result[$i]');
+	print''.$result[$i].'';
 }
 for($i = 0, $size = count($result); $i <= $size; ++$i) {
 	print '<TR>

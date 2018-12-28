@@ -25,7 +25,8 @@ require_once('connect.php');
 $maxsqlzapr="SELECT MAX(idobjects) AS max FROM objects";
 $maxSQL = mysqli_query($con,$maxsqlzapr);
 
-while($row = mysql_fetch_assoc($maxSQL));
+$row = mysql_fetch_array( $maxSQL );
+$varMaxid = $row['max'];
 
 echo "maxid:";
 echo $varMaxid;

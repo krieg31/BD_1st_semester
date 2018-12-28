@@ -25,14 +25,14 @@
 			
 <table width="100%" cellspacing="0" border="1">	
 		<TR>
-			<TH>Table column 1</TH>
+			<TH>выбери id объекта</TH>
 		</TR>
 		<TR>
 			<TD>
 
 				<form action="show_photos_form.php" method="post">
 
-					<select name="idowner">
+					<select name="objects_idobjects">
 						<?php 
 						require_once('connect.php');
 	

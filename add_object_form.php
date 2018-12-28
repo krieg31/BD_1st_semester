@@ -1,7 +1,5 @@
 <?php
 
-$link = mysqli_connect('10.14.129.132', 'HorchoevArtur', 'we4DGTeQ','HorchoevArturDB')
-    or die('Error: Unable to connect: ' . mysqli_connect_error());
 
 $adress = mysqli_real_escape_string($link, $_POST['adress']);
 $square = mysqli_real_escape_string($link, $_POST['square']);
@@ -27,13 +25,13 @@ $SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, descr
 echo '<BR> SQL query: ';
 echo $SQLquery;
 
-if (mysqli_query($link, $SQLquery)) {
+if (mysqli_query($con, $SQLquery)) {
     echo "<BR>New record created successfully";
 } else {
-    echo "<BR>Error: " . $sql . "<br>" . mysqli_error($link);
+    echo "<BR>Error: " . $sql . "<br>" . mysqli_error($con);
 }
 
-mysqli_close($link);
+mysqli_close($con);
 
 printf('<a href="index.html"> <P>GO BACK</P> </a>');
 ?>

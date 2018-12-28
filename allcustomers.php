@@ -28,12 +28,8 @@
 	
 	require_once('connect.php');
 	
-	//$link = mysqli_query($con,$SQLquery); 
 	$SQLquery = 'SELECT * FROM customers';
-	printf('<P>Succesfully connected!</P> %s',"\n");	
 	$SQLresult = mysqli_query($con,$SQLquery);
-	$afh = mysqli_num_rows($SQLresult);
-	printf('Res: %d',$afh);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
@@ -54,7 +50,7 @@
 	}
 	printf('</table> %s',"\n");
 	mysqli_free_result($SQLresult);
-	mysqli_close($link);
+	mysqli_close($con);
 
 ?>
 <BR>

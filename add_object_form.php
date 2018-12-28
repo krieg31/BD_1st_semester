@@ -21,7 +21,7 @@ echo $predoplata;
 echo $free;
 echo $idowner;
 $maxid = "SELECT max(idobjects)+1 from (Select idobjects from objects)";
-$SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, descriptionl, price, predoplata, free, customers_idcustomer) VALUES ('$maxid', '$adress',$square,$room,$floors,'$descriptionl',$price,$predoplata,$free,$idowner)";
+$SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, descriptionl, price, predoplata, free, customers_idcustomer) VALUES ($maxid, '$adress',$square,$room,$floors,'$descriptionl',$price,$predoplata,$free,$idowner)";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 

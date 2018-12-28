@@ -30,23 +30,17 @@
 			<TD>
 			  <P>Add object:</P>
 			  <form action="add_customer_form.php" method="post">
+					passport: <input type="text" name="passport">
+          		  	<br>
 					adress: <input type="text" name="adress">
           		  	<br>
-					square: <input type="text" name="square">
+					surname: <input type="text" name="surname">
           		  	<br>
-					room: <input type="text" name="room">
+					name: <input type="text" name="name">
           		  	<br>
-					floors: <input type="text" name="floors">
+					fathername: <input type="text" name="fathername">
           		  	<br>
-					descriptionl: <input type="text" name="descriptionl">
-          		  	<br>
-					price: <input type="text" name="price">
-          		  	<br>
-					predoplata: <input type="text" name="predoplata">
-          		  	<br>
-					free: <input type="text" name="free">
-          		  	<br>
-            		  	<input type="submit" value="Add object">
+            		  	<input type="submit" value="Add customer">
       			  </form>
 			</TD>
 		</TR>

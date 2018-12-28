@@ -20,13 +20,19 @@ echo $price;
 echo $predoplata;
 echo $free;
 echo $idowner;
+require_once('connect.php');
 $maxid = "SELECT max(idobjects) from (SELECT idobjects FROM objects)";
+$varMaxid
+$SQLresult=mysqli_query($con,$maxid);
+while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
+	{
+		$varMaxid=$result[0];
+	}
 echo "maxid:";
-echo $maxid;
-$SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, descriptionl, price, predoplata, free, customers_idcustomer) VALUES ($maxid, '$adress',$square,$room,$floors,'$descriptionl',$price,$predoplata,$free,$idowner)";
+echo $varMaxid;
+$SQLquery = "INSERT INTO objects (idobjects, adress, square, room, floors, descriptionl, price, predoplata, free, customers_idcustomer) VALUES ($varMaxid, '$adress',$square,$room,$floors,'$descriptionl',$price,$predoplata,$free,$idowner)";
 echo '<BR> SQL query: ';
 echo $SQLquery;
-require_once('connect.php');
 if (mysqli_query($con, $SQLquery)) {
     echo "<BR>New record created successfully";
 } else {

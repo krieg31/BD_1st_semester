@@ -18,6 +18,8 @@ printf('<TR>');
 		printf("\n");
 		$varA=$varA+1;
 	}
+printf('</TR>');		
+printf('</table>');
 
 mysqli_close($con);
 printf('<a href="index.html"> <P>GO BACK</P> </a>');
